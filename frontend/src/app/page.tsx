@@ -1,5 +1,4 @@
-import Image from "next/image";
-import TestContainer from "./components/TestContainer";
+import TestContainer from "@components/TestContainer";
 
 export default function Home() {
   return (
