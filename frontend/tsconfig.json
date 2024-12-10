@@ -19,11 +19,19 @@
     ],
     "paths": {
       "@utils/*": ["./src/utils/*"],
-      "@api/*": ["./src/api/*"],
       "@components/*": ["./src/components/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@types/*": ["./src/types/*"],
+      "@mocks/*": ["./src/mocks/*"],
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/utils/db.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/utils/db.js"
+  ],
   "exclude": ["node_modules"]
 }
