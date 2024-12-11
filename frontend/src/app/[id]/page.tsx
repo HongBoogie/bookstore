@@ -35,6 +35,7 @@ export default function BookDetailPage() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["books"] });
       router.push("/");
+      alert("책이 삭제되었습니다.");
     },
   });
 
@@ -57,14 +58,11 @@ export default function BookDetailPage() {
           <p>
             <strong>설명:</strong> {book.description}
           </p>
-          <p>
-            <strong>가격:</strong> {book.price}원
-          </p>
 
           <div className="flex space-x-2 mt-4">
             <Button
               variant="outline"
-              onClick={() => router.push(`/books/${bookId}/edit`)}
+              onClick={() => router.push(`/edit?bookId=${params.id}`)}
             >
               수정
             </Button>
