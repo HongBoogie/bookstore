@@ -262,10 +262,7 @@ export async function POST(request: NextRequest) {
     mockBooks.push(book);
     return NextResponse.json(book, { status: 201 });
   } catch (error) {
-    return NextResponse.json(
-      { error: "책 추가 중 오류가 발생했습니다." },
-      { status: 500 }
-    );
+    return NextResponse.json(error, { status: 500 });
   }
 }
 
@@ -293,10 +290,7 @@ export async function PUT(request: NextRequest) {
 
     return NextResponse.json(mockBooks[index], { status: 200 });
   } catch (error) {
-    return NextResponse.json(
-      { error: "책 수정 중 오류가 발생했습니다." },
-      { status: 500 }
-    );
+    return NextResponse.json(error, { status: 500 });
   }
 }
 
@@ -327,9 +321,6 @@ export async function DELETE(request: NextRequest) {
       { status: 200 }
     );
   } catch (error) {
-    return NextResponse.json(
-      { error: "책 삭제 중 오류가 발생했습니다." },
-      { status: 500 }
-    );
+    return NextResponse.json(error, { status: 500 });
   }
 }

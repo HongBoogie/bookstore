@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useParams, useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -11,7 +11,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Book } from "@/types/books";
 
 export default function BookEditPage() {
-  const params = useParams();
   const router = useRouter();
   const bookId = useSearchParams().get("bookId") as string;
 

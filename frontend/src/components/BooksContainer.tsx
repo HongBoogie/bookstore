@@ -10,15 +10,14 @@ import Link from "next/link";
 
 export default function BooksContainer() {
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
 
   const fetchBooks = async () => {
-    const response = await fetch(`/api/books?page=${page}&search=${search}`);
+    const response = await fetch(`/api/books?page=${page}`);
     return response.json();
   };
 
   const { data, isLoading, error } = useQuery({
-    queryKey: ["books", page, search],
+    queryKey: ["books", page],
     queryFn: fetchBooks,
   });
 
