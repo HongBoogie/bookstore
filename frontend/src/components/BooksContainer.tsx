@@ -26,12 +26,12 @@ export default function BooksContainer() {
   if (error) return <div>Error: {error.message}</div>;
 
   return (
-    <div className="container mx-auto p-4">
-      <Card>
-        <CardContent>
+    <div className="mx-auto p-4 w-3/4">
+      <Card className="w-full h-full">
+        <CardContent className="mt-4">
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-2xl font-bold">책 목록</h1>
-            <Link href="/books/new">
+            <Link href="/new">
               <Button>새 책 추가</Button>
             </Link>
           </div>
